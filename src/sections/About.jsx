@@ -30,7 +30,7 @@ const About = () => {
                 Hi, I'm FSA
               </p>
               <p className="text-[#afb0b6] text-base">
-                With 1yr of experience, I have honed my skills in frondent
+                With 1yr of experience, I have honed my skills in frontend
                 development focusing on 3d Web Apps
               </p>
             </div>
