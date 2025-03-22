@@ -27,11 +27,12 @@ const About = () => {
             />
             <div>
               <p className="text-xl font-semibold mb-2 text-white">
-                Hi, I'm FSA
+                Hi, I'm Fowotade Simeon Adekunle
               </p>
               <p className="text-[#afb0b6] text-base">
-                With 1yr of experience, I have honed my skills in frontend
-                development focusing on 3d Web Apps
+                I am a Frontend Software Developer and have consistently
+                improved my development skills over a year plus, working on
+                several projects.
               </p>
             </div>
           </div>
@@ -49,7 +50,8 @@ const About = () => {
                 Tech Stack
               </p>
               <p className="text-[#afb0b6] text-base">
-                I specialise in JS/TS React, Next.js ecosystems
+                I currently focused on few stacks, Nextjs, javascripts,
+                typescripts, threejs and more...
               </p>
             </div>
           </div>
@@ -98,11 +100,11 @@ const About = () => {
             />
             <div>
               <p className="text-xl font-semibold mb-2 text-white">
-                My passion for coding
+                My passion
               </p>
               <p className="text-[#afb0b6] text-base">
-                I love solving problems and building things through code. coding
-                isn't just my profession, it is my passion
+                I love solving problems, building products excits me, in the
+                world of software engineering I like to make a melodious sound.
               </p>
             </div>
           </div>
@@ -116,7 +118,7 @@ const About = () => {
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
             <div className="space-y-2">
-              <p className="text-[#afb0b6] text-base text-center">Contact Me</p>
+              <p className="text-[#afb0b6] text-base text-center">Copy my Email</p>
               <div
                 className="cursor-pointer flex justify-center items-center gap-2"
                 onClick={handleCopy}>

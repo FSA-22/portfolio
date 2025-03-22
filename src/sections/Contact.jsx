@@ -67,7 +67,7 @@ const Contact = () => {
           <p className="text-[13px] md:text-[14px] sm:text-[14px] text-white mt-2">
             Whether you are looking to build a new website, improve your
             existing platforms, or bring a unique project to life , I'm here to
-            help.
+            help, please contact me here.
           </p>
 
           <form
