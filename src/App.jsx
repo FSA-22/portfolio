@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import LoadingMessage from "./component/LoadingMessage";
-import NavBar from "./sections/NavBar";
-import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Clients from "./sections/Clients";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
+import React, { useState } from 'react';
+import LoadingMessage from './component/LoadingMessage';
+import NavBar from './sections/NavBar';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Projects from './sections/Projects';
+import Clients from './sections/Clients';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,8 +16,9 @@ const App = () => {
 
       <main
         className={`max-w-7xl mx-auto min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0 "
-        }`}>
+          isLoaded ? 'opacity-100' : 'opacity-0 '
+        }`}
+      >
         <NavBar />
         <Hero />
         <About />

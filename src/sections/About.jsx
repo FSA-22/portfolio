@@ -1,12 +1,12 @@
-import Globe from "react-globe.gl";
-import Button from "../component/Button";
-import { useState } from "react";
+import Globe from 'react-globe.gl';
+import Button from '../component/Button';
+import { useState } from 'react';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("simeonstat@gmail.com");
+    navigator.clipboard.writeText('simeonstat@gmail.com');
 
     setHasCopied(true);
 
@@ -34,6 +34,19 @@ const About = () => {
                 improved my development skills over a year plus, working on
                 several projects.
               </p>
+              <ul className="text-[#afb0b6] text-base">
+                <li>
+                  I have interned at Enoverlab Where I collaborated with bright
+                  minds from PMs Designers to build Flowpal, a small business
+                  mangement web app.
+                </li>
+                <li>
+                  I am currently interning at TCU, where I co-lead a team of
+                  frontend developers and we are building BizEase web app, app
+                  that manages inventory with so many other unique modern
+                  features using Nextjs.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -50,8 +63,8 @@ const About = () => {
                 Tech Stack
               </p>
               <p className="text-[#afb0b6] text-base">
-                I currently focused on few stacks, Nextjs, javascripts,
-                typescripts, threejs and more...
+                I am focusing on few stacks, nextjs, javascripts, typescripts,
+                threejs and more...
               </p>
             </div>
           </div>
@@ -103,8 +116,8 @@ const About = () => {
                 My passion
               </p>
               <p className="text-[#afb0b6] text-base">
-                I love solving problems, building products excits me, in the
-                world of software engineering I like to make a melodious sound.
+                I love solving problems, building products excits me, making
+                money energises me!
               </p>
             </div>
           </div>
@@ -118,12 +131,15 @@ const About = () => {
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
             <div className="space-y-2">
-              <p className="text-[#afb0b6] text-base text-center">Copy my Email</p>
+              <p className="text-[#afb0b6] text-base text-center">
+                Copy my Email
+              </p>
               <div
                 className="cursor-pointer flex justify-center items-center gap-2"
-                onClick={handleCopy}>
+                onClick={handleCopy}
+              >
                 <img
-                  src={hasCopied ? "/assets/tick.svg" : "/assets/copy.svg"}
+                  src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'}
                   alt="copy"
                 />
                 <p className="lg:text-2xl md:text-xl bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent">

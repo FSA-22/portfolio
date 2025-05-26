@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const formRef = useRef();
@@ -7,9 +7,9 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const handleChange = ({ target: { name, value } }) => {
@@ -22,33 +22,33 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_goa35yn",
-        "template_jexs67e",
+        'service_goa35yn',
+        'template_jexs67e',
         {
           from_name: form.name,
-          to_name: "FSA",
+          to_name: 'FSA',
           from_email: form.email,
-          to_email: "simeonstat@gmail.com",
+          to_email: 'simeonstat@gmail.com',
           message: form.message,
         },
-        "5D6oo0cwN8cmpmcqm"
+        '5D6oo0cwN8cmpmcqm',
       );
 
       setLoading(false);
 
-      alert("Your message sent successfully");
+      alert('Your message sent successfully');
 
       setForm({
-        name: "",
-        email: "",
-        message: "",
+        name: '',
+        email: '',
+        message: '',
       });
     } catch (error) {
       setLoading(false);
 
       console.log(error);
 
-      alert("Something went wrong!");
+      alert('Something went wrong!');
     }
   };
 
@@ -67,14 +67,16 @@ const Contact = () => {
           <p className="text-[13px] md:text-[14px] sm:text-[14px] text-white mt-2">
             Whether you are looking to build a new website, improve your
             existing platforms, or bring a unique project to life , I'm here to
-            help, please contact me here.
+            help, please contact me here, i will be super glad to deliver an
+            attractive product.
           </p>
 
           <form
             action=""
             ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-5 flex flex-col space-y-5">
+            className="mt-5 flex flex-col space-y-5"
+          >
             <label htmlFor="" className="space-y-3">
               <span className="text-lg text-white">Full Name</span>
               <input
@@ -115,8 +117,9 @@ const Contact = () => {
             <button
               className="bg-gray-800/80 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3"
               type="submit"
-              disabled={loading}>
-              {loading ? "Sending" : "Send Message"}
+              disabled={loading}
+            >
+              {loading ? 'Sending' : 'Send Message'}
               <img
                 src="/assets/arrow-up.png"
                 alt="arrow-up"
