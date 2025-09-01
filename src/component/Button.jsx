@@ -1,18 +1,15 @@
-import React from "react";
-
-const Button = ({ name, isBeam = false, containerClass }) => {
+const Button = ({ text, id, className }) => {
   return (
-    <button
-      className={`flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black/80   transition-all active:scale-95 text-white mx-auto ${containerClass}`}>
-      {name}
-      {isBeam && (
-        <span className="relative flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+    <a className={`cta-wrapper ${className ?? ''}`}>
+      <div className="cta-button group">
+        <div className="bg-circle" />
+        <p className="text"> {text} </p>
 
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-400" />
-        </span>
-      )}
-    </button>
+        <div className="arrow-wrapper">
+          <img src="/images/arrow-down.svg" alt="arrow down" />
+        </div>
+      </div>
+    </a>
   );
 };
 

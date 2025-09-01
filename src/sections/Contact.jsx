@@ -1,10 +1,14 @@
+'use client';
+
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const formRef = useRef();
 
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // success/error message
 
   const [form, setForm] = useState({
     name: '',
@@ -15,10 +19,11 @@ const Contact = () => {
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
+    setStatus(null);
 
     try {
       await emailjs.send(
@@ -35,99 +40,137 @@ const Contact = () => {
       );
 
       setLoading(false);
-
-      alert('Your message sent successfully');
-
-      setForm({
-        name: '',
-        email: '',
-        message: '',
+      setStatus({
+        type: 'success',
+        text: '✅ Your message was sent successfully!',
       });
+
+      setForm({ name: '', email: '', message: '' });
     } catch (error) {
       setLoading(false);
-
-      console.log(error);
-
-      alert('Something went wrong!');
+      console.error(error);
+      setStatus({
+        type: 'error',
+        text: '❌ Something went wrong. Please try again.',
+      });
     }
   };
 
   return (
-    <section className="sm:px-10 px-5 my-20" id="contact">
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img
-          src="/assets/terminal.png"
-          alt="terminal-background"
-          className="absolute inset-0 min-h-screen"
-        />
-        <div className="max-w-xl relative z-10 sm:px-10 px-5 md:mt-10 xl:mt-30 mt-5">
-          <h3 className="sm:text-3xl text-2xl font-semibold bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent">
-            Contact Me
-          </h3>
-          <p className="text-[13px] md:text-[14px] sm:text-[14px] text-white mt-2">
-            Whether you are looking to build a new website, improve your
-            existing platforms, or bring a unique project to life , I'm here to
-            help, please contact me here, i will be super glad to deliver an
-            attractive product.
-          </p>
+    <section
+      id="contact"
+      className="sm:px-10 px-5 py-20 relative overflow-hidden"
+    >
+      {/* Background Image */}
+      <img
+        src="/assets/terminal.png"
+        alt="terminal-background"
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+      />
 
-          <form
-            action=""
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="mt-5 flex flex-col space-y-5"
-          >
-            <label htmlFor="" className="space-y-3">
-              <span className="text-lg text-white">Full Name</span>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                className="w-full bg-black/80 px-5 py-2 sm:min-h-14 min-h-12 text-amber-100 rounded-lg placeholder:text-gray-500 text-base shadow-gray-950 shadow-xl focus:outline-none"
-                placeholder="Jane Doe"
-                required
-              />
-            </label>
-            <label htmlFor="" className="space-y-3">
-              <span className="text-lg text-white">Email</span>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                className="w-full bg-black/80 px-5 py-2 sm:min-h-14 min-h-12 rounded-lg text-amber-100 placeholder:text-gray-500 text-base shadow-gray-950 shadow-xl focus:outline-none"
-                placeholder="janedoe@gmail.com"
-                required
-              />
-            </label>
-            <label htmlFor="" className="space-y-3">
-              <span className="text-lg text-white">Your Message</span>
-              <textarea
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                rows={4}
-                className="w-full bg-black/80 px-5 py-2 min-h-14 rounded-lg text-amber-100 placeholder:text-gray-500 text-base shadow-gray-950 shadow-xl focus:outline-none"
-                placeholder="Hi, I like to engage your...."
-                required
-              />
-            </label>
+      {/* Content */}
+      <div className="relative z-10 max-w-2xl mx-auto">
+        {/* Heading */}
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="sm:text-4xl text-2xl font-bold text-center 
+            bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 
+            bg-clip-text text-transparent"
+        >
+          Contact Me
+        </motion.h3>
 
-            <button
-              className="bg-gray-800/80 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3"
-              type="submit"
-              disabled={loading}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-gray-300 text-center mt-4 text-sm sm:text-base"
+        >
+          Have an idea, a project, or just want to say hi? Fill out the form
+          below — I’d love to hear from you.
+        </motion.p>
+
+        {/* Form */}
+        <motion.form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mt-10 p-8 rounded-2xl shadow-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex flex-col space-y-6"
+        >
+          {/* Full Name */}
+          <div className="flex flex-col space-y-2">
+            <label className="text-white font-medium">Full Name</label>
+            <input
+              type="text"
+              aria-label="Full Name"
+              autoComplete="name"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Jane Doe"
+              className="w-full bg-black/50 px-4 py-3 rounded-lg text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
+              required
+            />
+          </div>
+
+          {/* Email */}
+          <div className="flex flex-col space-y-2">
+            <label className="text-white font-medium">Email</label>
+            <input
+              type="email"
+              name="email"
+              autoComplete="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="janedoe@gmail.com"
+              className="w-full bg-black/50 px-4 py-3 rounded-lg text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
+              required
+            />
+          </div>
+
+          {/* Message */}
+          <div className="flex flex-col space-y-2">
+            <label className="text-white font-medium">Your Message</label>
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              rows={5}
+              placeholder="Hi, I’d like to work with you on..."
+              className="w-full bg-black/50 px-4 py-3 rounded-lg text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+              required
+            />
+          </div>
+
+          {/* Status Message */}
+          {status && (
+            <p
+              className={`text-sm ${
+                status.type === 'success' ? 'text-green-400' : 'text-red-400'
+              }`}
             >
-              {loading ? 'Sending' : 'Send Message'}
-              <img
-                src="/assets/arrow-up.png"
-                alt="arrow-up"
-                className="w-2.5 h-2.5 object-contain invert brightness-0"
-              />
-            </button>
-          </form>
-        </div>
+              {status.text}
+            </p>
+          )}
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-3 rounded-lg text-white font-medium shadow-lg hover:opacity-90 active:scale-95 transition flex items-center justify-center gap-2"
+          >
+            {loading ? 'Sending...' : 'Send Message'}
+            <img
+              src="/assets/arrow-up.png"
+              alt="arrow-up"
+              className="w-3 h-3 object-contain invert"
+            />
+          </button>
+        </motion.form>
       </div>
     </section>
   );
