@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LoadingMessage from './component/LoadingMessage';
 import NavBar from './sections/NavBar';
 import Hero from './sections/Hero';
@@ -7,6 +7,7 @@ import Projects from './sections/Projects';
 import Clients from './sections/Clients';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import Experience from './sections/Experience';
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,6 +24,7 @@ const App = () => {
         <Hero />
         {/* <About /> */}
         <Projects />
+        <Experience />
         <Clients />
         <Contact />
         <Footer />

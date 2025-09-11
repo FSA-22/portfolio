@@ -24,36 +24,36 @@ export const navLinks = [
 export const clientReviews = [
   {
     id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
+    name: 'Familugba Tunde',
+    position: 'Graphic Designer',
     img: 'assets/review1.png',
     review:
-      'Working with Simeon was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+      'Working with Simeon was a fantastic experience. He delivered our first and only website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
   },
-  {
-    id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Simeon’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-  },
+  // {
+  //   id: 2,
+  //   name: 'Mark Rogers',
+  //   position: 'Founder of TechGear Shop',
+  //   img: 'assets/review2.png',
+  //   review:
+  //     'Simeon’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+  // },
   {
     id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
+    name: 'Tosin Oyeniyi',
+    position: 'Artist Freelancer',
     img: 'assets/review3.png',
     review:
-      'I can’t say enough good things about Simeon. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+      'I am prooud to say enough good things about Simeon. He was able to deliverb a beuatiful website when recommended to a client complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
   },
-  {
-    id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Simeon was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-  },
+  // {
+  //   id: 4,
+  //   name: 'Ether Smith',
+  //   position: 'CEO of BrightStar Enterprises',
+  //   img: 'assets/review4.png',
+  //   review:
+  //     'Simeon was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+  // },
 ];
 
 export const myProjects = [
@@ -331,41 +331,26 @@ export const techStackIcons = [
 export const expCards = [
   {
     review:
-      'Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.',
-    imgPath: '/images/exp1.png',
-    logoPath: '/images/logo1.png',
-    title: 'Frontend Developer',
-    date: 'January 2023 - Present',
+      'FSA expertise to the team was a spotlight in the full scale Bizease App developement, significantly improve one of our produts performance. His work and dedication to team work is invaluable.',
+    imgPath: '/images/tcu.png',
+    logoPath: '/images/tcu.png',
+    title: 'Frontend Developer Lead',
+    date: 'April 2025 - Aug',
     responsibilities: [
-      'Developed and maintained user-facing features for the Hostinger website.',
-      'Collaborated closely with UI/UX designers to ensure seamless user experiences.',
+      'Developed and maintained frontend features for BizEase web app.',
+      'Collaborated closely with UI/UX designers, backend guys and product manager to ensure timely product delivery and seamless user experiences.',
       'Optimized web applications for maximum speed and scalability.',
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: '/images/exp2.png',
-    logoPath: '/images/logo2.png',
-    title: 'Full Stack Developer',
-    date: 'June 2020 - December 2023',
+      'FSA development of Flowpal web application is great being the only frontend developer in the team for this intership. He approaches challenges with a problem-solving mindset.',
+    imgPath: '/images/enoverlab.png',
+    logoPath: '/images/eno-small.jpg',
+    title: 'Frontend Developer',
+    date: 'Nov 2024 - March 2025',
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      'Worked with backend engineers to integrate APIs seamlessly with the frontend.',
-      'Contributed to open-source projects that were used with the Docker ecosystem.',
-    ],
-  },
-  {
-    review:
-      'Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.',
-    imgPath: '/images/exp3.png',
-    logoPath: '/images/logo3.png',
-    title: 'React Native Developer',
-    date: 'March 2019 - May 2020',
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      'Improved app performance and user experience through code optimization and testing.',
-      'Coordinated with the product team to implement features based on feedback.',
+      'Development of a frontend-only web application - Flowpal, focusing on scalability.',
     ],
   },
 ];
