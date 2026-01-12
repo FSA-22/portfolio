@@ -108,7 +108,6 @@ const About = () => {
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
               /> */}
-              pictures here
             </div>
             <div>
               <p className="text-xl font-semibold mb-2 text-white">
