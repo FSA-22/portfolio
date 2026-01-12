@@ -19,7 +19,7 @@ const About = () => {
     <section className="sm:px-10 px-5 my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
-          <div className="w-full h-full border border-black-300 bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid1.png"
               alt="grid-1"
@@ -27,7 +27,7 @@ const About = () => {
             />
             <div>
               <p className="text-xl font-semibold mb-2 text-white">
-                Hi, I’m Fowotade Simeon Adekunle{' '}
+                Hi, I’m Fowotade Simeon Adekunle
               </p>
               <p className="text-[#afb0b6] text-base">
                 I am a Frontend Engineer specializing in building scalable,
@@ -69,7 +69,7 @@ const About = () => {
         </div>
 
         <div className="col-span-1 xl:row-span-3">
-          <div className="w-full h-full border border-black-300  bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid2.png"
               alt="grid-2"
@@ -96,7 +96,7 @@ const About = () => {
         </div>
 
         <div className="col-span-1 xl:row-span-4">
-          <div className="w-full h-full border border-black-300  bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               {/* <Globe
                 height={326}
@@ -108,6 +108,11 @@ const About = () => {
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
               /> */}
+              <img
+                src="/images/virtual-global.webp"
+                alt="virtual-global"
+                className="w-60 h-60 rounded-full object-cover"
+              />
             </div>
             <div>
               <p className="text-xl font-semibold mb-2 text-white">
@@ -119,9 +124,9 @@ const About = () => {
                 and adapting to async workflows while maintaining strong
                 communication and delivery standards. I am open to remote roles,
                 contract work, and long-term opportunities where product quality
-                and engineering discipline are valued.{' '}
+                and engineering discipline are valued.
               </p>
-              <div className="bg-gray-950">
+              {/* <div className="bg-gray-950">
                 <a href="#contact" className="w-fit">
                   <Button
                     name="Contact Me"
@@ -129,13 +134,13 @@ const About = () => {
                     containerClass="w-full mt-10"
                   />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
         <div className="xl:col-span-2 xl:row-span-3">
-          <div className="w-full h-full border border-black-300  bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid3.png"
               alt="grid-3"
@@ -161,7 +166,7 @@ const About = () => {
         </div>
 
         <div className="xl:col-span-1 xl:row-span-2">
-          <div className="w-full h-full border border-black-300  bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full  bg-neutral-950 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src="/assets/grid4.png"
               alt="grid-4"
